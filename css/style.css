@@ -1,0 +1,106 @@
+/* Resets */
+
+@import url(nomalize.min.css);
+@import url(reset.css);
+
+/* Tipografia */
+@font-face {
+    font-family: "Roboto";
+    src: url("../font/roboto-regular.woff2") format("woff2"),
+        url("../font/roboto-regular.woff") format("woff");
+}
+
+/* Colores */
+
+:root {
+    --color-blanco: #ffffff;
+    --color-gris: #f2f2f2;
+    --color-negro: #000000;
+    --color-rojo: #f23d3d;
+    --color-rojo-oscuro: #732929;
+    --color-turquesa: #4bbfb4;
+    --color-turquesa-oscuro: #3b8c84;
+}
+
+
+/* GENRICOS */
+
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+
+
+/* Header */
+
+.header_banner {
+    & img {
+        width: 100%;
+    }
+}
+
+nav {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boton {
+    padding: 20px 40px;
+    color: var(--color-blanco);
+    background: var(--color-turquesa-oscuro, #3b8c84);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1;
+}
+
+
+
+/* Main */
+
+.main_imagen{
+    & img{
+        width: 100%;
+    }
+}
+.main_parrafo{
+    padding: 20px;
+}
+
+/* Footer */
+
+footer {
+    height: 65px;
+    background: var(--color-turquesa, #4bbfb4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Fijado abajo */
+    /* position: fixed;
+    bottom: 0;
+    width: 100%; */
+}
+
+.footer_redes {
+    display: flex;
+    gap: 10px;
+
+}
+
+/* Formulario */
+
+form{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: [inputs]repeat(2, 50px) [textarea]250px [boton] 50px [parrafo] 200px;
+    row-gap: 10px;
+}
+input, textarea{
+    padding: 10px;
+}
+
+::placeholder{
+color: gray;
+}
